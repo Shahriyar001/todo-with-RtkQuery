@@ -1,11 +1,10 @@
-import { Button } from "./components/ui/button";
+import Todo from "./pages/Todo";
 
 function App() {
   return (
     <>
       <div>
-        <h1>hello world</h1>
-        <Button>My button</Button>
+        <Todo />
       </div>
     </>
   );

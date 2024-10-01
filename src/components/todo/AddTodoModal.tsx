@@ -15,7 +15,7 @@ const AddTodoModal = () => {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant="outline">Edit Profile</Button>
+        <Button className="bg-blue-500 text-xl font-semibold">Add Todo</Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>

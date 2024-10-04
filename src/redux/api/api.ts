@@ -12,9 +12,16 @@ export const baseApi = createApi({
         method: "GET",
       }),
     }),
+    addTodo: builder.mutation({
+      query: (data) => ({
+        url: "/tasks",
+        method: "POST",
+        body: data,
+      }),
+    }),
   }),
 });
 
-export const { useGetMenuQuery } = baseApi;
+export const { useGetMenuQuery, useAddTodoMutation } = baseApi;
 
 // export const { useGetPokemonByNameQuery } = baseApi;

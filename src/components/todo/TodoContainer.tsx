@@ -5,13 +5,11 @@ import TodoFilter from "./TodoFilter";
 import { useGetMenuQuery } from "@/redux/api/api";
 
 const TodoContainer = () => {
-  const { data, error, isLoading } = useGetMenuQuery(undefined);
+  // const { data, error, isLoading } = useGetMenuQuery(undefined);
 
-  console.log(data[1].name);
-
-  if (isLoading) {
-    return <p>Loading....</p>;
-  }
+  // if (isLoading) {
+  //   return <p>Loading....</p>;
+  // }
 
   const { todos } = useAppSelector((state) => state.todos);
   console.log(todos);
@@ -23,9 +21,9 @@ const TodoContainer = () => {
       </div>
       <div className="bg-blue-600 w-full h-full rounded-xl p-[5px]">
         <div className="bg-white p-5 w-full h-full rounded-lg  space-y-3">
-          {data?.map((item) => (
+          {todos?.map((item) => (
             <TodoCard
-              title={item.name}
+              title={item.taskDetails.title}
               id={item.taskDetails.id}
               description={item.taskDetails.description}
             />

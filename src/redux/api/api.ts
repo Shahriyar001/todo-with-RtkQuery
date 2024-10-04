@@ -6,13 +6,15 @@ export const baseApi = createApi({
     baseUrl: "https://bistro-boss-server-one-iota.vercel.app/",
   }),
   endpoints: (builder) => ({
-    getTodos: builder.query({
-      query: (name) => ({
+    getMenu: builder.query({
+      query: () => ({
         url: "/menu",
         method: "GET",
       }),
     }),
   }),
 });
+
+export const { useGetMenuQuery } = baseApi;
 
 // export const { useGetPokemonByNameQuery } = baseApi;

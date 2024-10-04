@@ -32,6 +32,7 @@ const AddTodoModal = () => {
       // id: randomString,
       title: task,
       description: description,
+      isCompleted: false,
     };
 
     addTodo(taskDetails);

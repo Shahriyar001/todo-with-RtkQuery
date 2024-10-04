@@ -5,7 +5,7 @@ import TodoFilter from "./TodoFilter";
 import { useGetMenuQuery } from "@/redux/api/api";
 
 const TodoContainer = () => {
-  // const { data, error, isLoading } = useGetMenuQuery(undefined);
+  // const { data, error, isLoading } = useGetMenuQuery(undefined, {pollingInterval: 1000});
 
   // if (isLoading) {
   //   return <p>Loading....</p>;
